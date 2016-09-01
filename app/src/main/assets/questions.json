@@ -1,0 +1,95 @@
+{
+  "questions": [
+    {
+      "the question": "What is the height of a node?",
+      "choices": [
+        "The number of leaf nodes of the tree","The number of edges in the shortest path from that node to a leaf node","The number of edges in the longest path from that node to a leaf node","The number of edges from that node to a root node"
+        ],
+      "answer": "3"
+    },
+    {
+      "the question": "What is the difference between a Stack and a Queue?",
+      "choices": [
+        "Stack is LIFO(Last in First out) while Queue is FIFO(First in First out)","Stack is FIFO(First in First out) while Queue is LIFO(Last in First out)","Stack is implemented using a Queue","They are the same thing"
+      ],
+      "answer": "1"
+    },
+    {
+      "the question": "Which of the following is NOT part of the Insertion Sort process?",
+      "choices": [
+        "Picking a pivot","Comparing elements from the unsorted part of the array to elements in the sorted part","Merging subarrays","Swapping elements to determine to correct order"
+      ],
+      "answer": "3"
+    },
+    {
+      "the question": "What is the difference between a Stack and a Queue?",
+      "choices": [
+        "Stack is LIFO(Last in First out) while Queue is FIFO(First in First out)","Stack is FIFO(First in First out) while Queue is LIFO(Last in First out)","Stack is implemented using a Queue","They are the same thing"
+      ],
+      "answer": "1"
+    },
+    {
+      "the question": "What kind of rotation would you use in a Right-Left case?",
+      "choices": [
+        "Left rotation only","Right rotation only","Left rotation then right rotation","Right rotation then left rotation"
+      ],
+      "answer": "4"
+    },
+    {
+      "the question": "Which has a better time complexity, a Quick Sort or a Selection Sort?",
+      "choices": [
+        "Selection Sort","Quick Sort","Both are the same","None of the above"
+      ],
+      "answer": "2"
+    },
+    {
+      "the question": "Which has a better time complexity, a Quick Sort or a Selection Sort?",
+      "choices": [
+        "Selection Sort","Quick Sort","Both are the same","None"
+      ],
+      "answer": "2"
+    },
+    {
+      "the question": "What is the min heap property?",
+      "choices": [
+        "The balance of the subtrees must be less than 1","The value of each parent node must be smaller than its children","The value of each parent node must be greater than its children","The height of each node is the same"
+      ],
+      "answer": "2"
+    },
+    {
+      "the question": "What is Polymorphism?",
+      "choices": [
+        "A way to treat objects in a uniform way","Extending a class('is a' relationship)", "Aggregation('has a' relationship)","The Substitution Principle"
+      ],
+      "answer": "1"
+    },
+    {
+      "the question": "Which of the following is NOT a valid approach when dealing with an Open Addressing Hash Table?",
+      "choices": [
+        "Linear Probing","Quadratic Probing","Double Hashing","Chaining"
+      ],
+      "answer": "4"
+    },
+    {
+      "the question": "What is an Overloaded Method?",
+      "choices": [
+        "A method with the same name as a different one but differs in the parameters type or number.","A method that overrides a certain method from a superclass","A method the subclass inherits from the superclass","None of the above"
+      ],
+      "answer": "1"
+    },
+    {
+      "the question": "What are the two ways to represent a graph?",
+      "choices": [
+        "Linked List and Array","Hash Table and Hash Map", "Adjacency Matrix and Adjacency List", "Binary Search Tree and Heap"
+      ],
+      "answer": "3"
+    },
+    {
+      "the question": "What is Encapsulation?",
+      "choices": [
+        "A format for organizing and storing data for a special purpose", "Hiding implementation details when publishing an interface", "Another name for an interface", "An Abstract Data Type"
+      ],
+      "answer": "2"
+    }
+  ]
+}

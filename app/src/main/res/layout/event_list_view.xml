@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:background="#00008B"
+                android:layout_height="115dp"
+                android:id="@+id/layoutCustom">
+
+    <View android:layout_width="fill_parent" android:layout_height="15dp"
+          android:background="#EEEEEE"
+          android:id="@+id/SpaceView"
+    />
+
+    <TextView
+            android:layout_below="@id/SpaceView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:text="type"
+            android:id="@+id/type" android:layout_margin="10dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="company"
+            android:id="@+id/company"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+
+            android:layout_below="@+id/type"
+            android:layout_marginLeft="10dp"
+
+    />
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/company"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:text="date"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/date" android:layout_marginTop="10dp"/>
+
+    <ImageView
+            android:layout_width="35dp"
+            android:layout_height="33dp"
+            android:id="@+id/delete"
+            android:src="@drawable/delete"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="18dp"
+
+    />
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
+

@@ -1,0 +1,135 @@
+{
+  "topics": [
+    {
+      "category": "Data Structures",
+      "title": "Arrays",
+      "description": "Array is a data structure consisting of a collection elements (integers, strings,etc), each identified by an array index/key. Arrays resemble computer memory, and are simple and fast to use. This data structure is very important since it is used to implement other complex data structures. The limitations of arrays include the fact the indices are integers only, and that the programmer must know the size of the array when it's created."
+    },
+    {
+      "category": "Data Structures",
+      "title": "Linked Lists",
+      "description": "Linked List is used to store large amount of data, similar to an array. It is made of nodes, that contain a certain value and a pointer that points to the node coming before/after them. There are two main types of linked lists; Singly Linked List, where every node has a pointer to the node that comes after it, and Doubly Linked List, where every node has a pointer to the node that comes before and after it. "
+    },
+    {
+      "category": "Data Structures",
+      "title": "Stack",
+      "description": "Stack is an abstract data type in which the elements are kept in a particular order. It is known as LIFO (Last in First out) data structure, similar to a stack of pans or pancakes. In other words, the last element to be pushed onto the stack will be the first element to be popped. In addition, only the top element of the stack is accessible. The operations of a stack include: retrieving the top element(top), removing the top element(pop), pushing a new element onto the stack(push), empty the stack(empty). A good example for an application would be a palindrome or a program what checks for balanced parentheses. It is also used to implement Depth-first search."
+    },
+    {
+      "category": "Data Structures",
+      "title": "Queue",
+      "description": "Queue is an abstract data type in which the elements are kept in order. It is known as FIFO (First in First out) data structure, similar to a line of people. In other words, the first element to be enqueued will be the first element to be dequeued. The operations of a queue include: retrieving the front element(front), removing the front element(pop), pushing a new element onto the queue(push), empty the queue(empty). A good example for an application would be maintaining a line of customers waiting for a service. It is also used to implement Breadth-first search."
+    },
+    {
+      "category": "Data Structures",
+      "title": "Trees",
+      "description": "Tree is an abstract data type-or data structure implementing this ADT-that simulates a hierarchical tree structure, with a root value and subtrees. It can be defined recursively as a collection of nodes where each node is a data structure consisting of a value, and pointers to its children/parent nodes. The tree data structure also gives rise to another data structure called Binary Search Tree - in which every node has at most 2 children and are ordered in an ascending order(left child value < root value < right child value. In addition, there are three different ways to traverse a tree: Preorder(root,left,right), Inorder(left,root,right) and Postorder(left,right,root)."
+    },
+    {
+      "category": "Data Structures",
+      "title": "Heaps",
+      "description": "Heap is a data structure used to implement Tree ADT. It is a complete binary tree with a special property; Every parent node must be smaller than its children nodes if min heap, and must be greater then its children node if max heap. The value of the root must be smaller or equal to all other values in the heap, and every subtree must be a heap as well. The important operations of a heap include Insertion- inserting a new node at the next free position and 'swapping up' if needed, and Deletion - deleting the root node(the minimum value) and moving the value in the last position to the root and 'swapping down' if needed."
+    },
+    {
+      "category": "Data Structures",
+      "title": "Hash Tables",
+      "description": "Hash Table is a data structure used to implement an associative array, a structure that can map keys to values. The programmer can access an element directly through its key value. The key value is determined by hashing; transforming the item's key value to an integer (using a hash function, usually involving a prime number that reduces collisions), which will be used as a table index. There are two ways to organize data in a Hash Table: Open Addressing, where each element points to a single key value, and Chaining, where each table element references a linked list that contains all the items hashed to that place."
+    },
+    {
+      "category": "Data Structures",
+      "title": "AVL Trees",
+      "description": "AVL tree is a Binary Search Tree with a special property; The balance(difference in heights of the subtrees) must be at most 1. If the balance is more than 1, we have to rotate in order to keep the tree balanced. There are 4 different types of rotations: Left-Left case, the tree will rotate right around the invariant; Right-Right case, the tree will rotate left around the invariant; Left-Right case, the tree will rotate left around child then right around invariant; And Right-Left case, the tree will rotate right around child then left around invariant. This balance property helps keep the tree somewhat complete, and therefore makes it more efficient than a regular Binary Search Tree."
+    },
+    {
+      "category": "Data Structures",
+      "title": "Graphs",
+      "description": "Graph is an ADT that is meant to implement graph concepts from mathematics. A graph data structure consists of finite set of vertices (nodes) and set of edges between the pairs of vertices. The edges represent paths or connections between the vertices. This data structure may associate to each edge some edge value. There are two wats to represent graphs: Adjacency List ahd Adjacency Matrix. The Adjacency List is an Array of Linked Lists where every cell has a linked list of vertices that are adjacent to the corresponding vertex. The Adjacency Matrix is a multidimensional Array where every cell will have a value of 1 if the corresponding vertices are adjacent and 0 if not. "
+    },
+    {
+      "category": "Sorts",
+      "title": "Insertion Sort",
+      "description": "Divide the array into two portions – sorted and unsorted. At every step, number is moving from the unsorted portion to the sorted portion.At first, consider all elements unsorted. Start with the first element and consider it sorted (pivot).Check every element against the pivot (the first element) and find its place in the sorted portion of the array."
+    },
+    {
+      "category": "Sorts",
+      "title": "Selection Sort",
+      "description": "Find minimum value in the array (just normal algorithm to find min). Then, we put the minimum value into the sorted portion of the array – the left most element.Then, recursively, find the minimum value in the unsorted portion and move it to its correct place in the sorted portion."
+    },
+    {
+      "category": "Sorts",
+      "title": "Merge Sort",
+      "description": "Recursively split the array into halves, until we end up with a bunch of subarrays with one element in them. Then, Repetitively merge the subarrays (left and right) using the merging algorithm - comparing elements of two arrays and putting the smaller one in the new array."
+    },
+    {
+      "category": "Sorts",
+      "title": "Heap Sort",
+      "description": "Implemented using Min/max heap. Can be thought of as an improved Selection Sort. Remove the root element, then move last element to be the root and swap down. Then repeat. If implemented as an array, the removed root will be the last element in the array at each iteration."
+    },
+    {
+      "category": "Sorts",
+      "title": "Quick Sort",
+      "description": "Picking a pivot. Then comparing and moving all other elements in the array either to the left of the pivot (if smaller) or to the right of the pivot (if greater). Then, recursively, picking a pivot for the right and left unsorted subarrays and performing comparisons just as before. Algorithm works best if pivot is approximately the middle value every time."
+    },
+    {
+      "category": "Terms",
+      "title": "Encapsulation",
+      "description": "Process of hiding implementation details while publishing an interface. The public methods of a class are an example of encapsulation, as they produce a certain result without showing the private implementation. "
+    },
+    {
+      "category": "Terms",
+      "title": "Inheritance",
+      "description": "The relationship between a more general class (called the superclass) and a more specific class (called the subclass). The subclass will inherit behaviour and data (instance variables, methods) from the superclass."
+    },
+    {
+      "category": "Terms",
+      "title": "Substitution Principle",
+      "description": "We can always use a subclass object when a superclass object is expected."
+    },
+    {
+      "category": "Terms",
+      "title": "Method Overloading",
+      "description": "Method signature of functions is similar (same name), but they differ in the number of arguments or the arguments’ type."
+    },
+    {
+      "category": "Terms",
+      "title": "Method Overriding",
+      "description": "When a subclass inherits a certain method and changes its implementation. It will have the same exact method signature, and @Override above it."
+    },
+    {
+      "category": "Terms",
+      "title": "Dynamic Method Lookup",
+      "description": "Method calls are determined by the type of the actual object, not type of variable. Therefore, at runtime, the compiler will know which method to use according to the object’s type."
+    },
+    {
+      "category": "Terms",
+      "title": "Polymorphism",
+      "description": "Treating objects of different classes in a uniform way.  We ask multiple objects to carry out a task, and each object does so in its own way."
+    },
+    {
+      "category": "Terms",
+      "title": "Interface",
+      "description": "Similar to an abstract class that doesn’t have instance variables, all methods have name and parameters but no implementation, all methods are automatically public, and we cannot construct objects of an interface."
+    },
+    {
+      "category": "Terms",
+      "title": "Data Structure",
+      "description": "A format for organizing and storing data. Any data structure is designed to organize data to suit a specific purpose so that it can be accessed and worked with efficiently."
+    },
+    {
+      "category": "Terms",
+      "title": "Abstract Data Type",
+      "description": "Class of objects which specifies the operations that can be performed on a data structure. In other words, it is just a theoretical concept, an interface of a data structure with no implementation. Data structure is a concrete implementation of the specification provided by the ADT."
+    },
+    {
+      "category": "Terms",
+      "title": "Tree Terminology ",
+      "description": "Depth of a node is the distance of this node from the root node(the number of edges). The Height of a node is the number of edges in the longest path from that node to a leaf node. Leaf Node is a node that has no children(at the bottom). The Successors of a node are called its children, and the Predecessor of a node is called its parent."
+    },
+    {
+      "category": "Terms",
+      "title": "Graph Terminology",
+      "description": "Undirected Graph is a graph that contains undirected edge. Directed Graph is a graph that contains edges that have a specific direction/can travel only in one direction. Path is a sequence of vertices in which each successive vertex is adjacent to its predecessor. Cycle is a simple path in which only the first and final vertices are the same. Connected Graph is a graph that is undirected and there is a path between any two vertices. Subgraph is when one graph is some part of another graph. Isomorphic is when two graphs have the same structure. Degree is the number of edges going in and out of a certain vertex."
+    }
+
+  ]
+}

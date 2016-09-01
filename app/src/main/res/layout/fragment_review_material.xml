@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            tools:context="com.example.barakjacob.intereview.ReviewMaterialFragment">
+
+        <TextView
+                android:text=""
+                android:id="@+id/WelcomeText"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <Button android:id="@+id/DataStructuresButton"
+                android:text="Data Structures"
+                android:layout_width="150dp"
+                android:layout_height="75dp"
+                android:layout_below="@+id/WelcomeText"
+                android:layout_marginTop="100dp"
+                android:onClick="onClick"
+        />
+
+        <Button android:id="@+id/SortsButton"
+                android:text="Sorts"
+                android:layout_width="150dp"
+                android:layout_height="75dp"
+                android:layout_below="@+id/DataStructuresButton"
+                android:layout_marginTop="10dp"
+                android:onClick="onClick"
+        />
+        <Button android:id="@+id/TermsButton"
+                android:text="Terms"
+                android:layout_width="150dp"
+                android:layout_height="75dp"
+                android:layout_alignTop="@+id/DataStructuresButton" android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:onClick="onClick"
+        />
+
+        <Button android:id="@+id/SampleQuestionsButton"
+                android:text="@string/SampleQuestionButtonText"
+                android:layout_width="150dp"
+                android:layout_height="75dp"
+                android:layout_below="@+id/TermsButton"
+                android:layout_marginTop="10dp"
+                android:layout_alignRight="@+id/TermsButton"
+                android:onClick="onClick"
+        />
+
+
+    </RelativeLayout>
+
+
+
