@@ -40,7 +40,7 @@ public class CreateEventActivity extends ActionBarActivity {
     /**
      * Sets the adapter of the spinner using the String array created in res/values/strings
      */
-    public void settingSpinnerAdapter(){
+    private void settingSpinnerAdapter(){
         myAdapter = ArrayAdapter.createFromResource(this,R.array.eventTypes,android.R.layout.simple_spinner_item);
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(myAdapter);
@@ -75,7 +75,7 @@ public class CreateEventActivity extends ActionBarActivity {
      * @param choice the spinner choice (type of event)
      * @param companyString the company entered by the user
      */
-    public void validateFields(String choice, String companyString){
+    private void validateFields(String choice, String companyString){
         //Spinner object does not need a validation (an option will always be chosen)
         //Validation of the company name
         if (companyString.trim().equals("")){
@@ -103,7 +103,7 @@ public class CreateEventActivity extends ActionBarActivity {
         /**
          * Puts an image instead of text for the action bar
          */
-    public void putImageForActionBar() {
+    private void putImageForActionBar() {
         final ActionBar actionBar = getSupportActionBar();
         //remove all text titles
         actionBar.setDisplayShowHomeEnabled(false);

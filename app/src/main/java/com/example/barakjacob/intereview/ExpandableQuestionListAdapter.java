@@ -17,7 +17,7 @@ public class ExpandableQuestionListAdapter extends BaseExpandableListAdapter {
     private Manager myManager;
     private List<Question> myList;
     private Context context;
-    private final RadioButton[] possibleAnswers = new RadioButton[4];
+    private RadioButton[] possibleAnswers;
 
     /**
      * Constructor of adapter
@@ -28,6 +28,7 @@ public class ExpandableQuestionListAdapter extends BaseExpandableListAdapter {
         context = c;
         myManager = Manager.getInstance();
         myList = myManager.getQuestions();
+        possibleAnswers = new RadioButton[4];
     }
 
     /**
@@ -142,12 +143,12 @@ public class ExpandableQuestionListAdapter extends BaseExpandableListAdapter {
         LayoutInflater inflater = LayoutInflater.from(context);
         final View childView = inflater.inflate(R.layout.custom_list_child_questions, parent, false);
         handleRadioButtons(childView,groupPosition);
+        childView.invalidate();
         return childView;
     }
 
     /**
      * Checks if the child can be selected/pressed as well
-     *
      * @return whether the child is selectable or not
      */
     @Override
@@ -156,7 +157,7 @@ public class ExpandableQuestionListAdapter extends BaseExpandableListAdapter {
     }
 
 
-    public void handleRadioButtons(View childView, int groupPosition) {
+    private void handleRadioButtons(View childView, int groupPosition) {
         final Question myQuestion = myList.get(groupPosition);
         RadioGroup group = (RadioGroup) childView.findViewById(R.id.buttonGroup);
         initializeButtons(childView);
@@ -171,30 +172,44 @@ public class ExpandableQuestionListAdapter extends BaseExpandableListAdapter {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 //get the index of the correct answer
+                resetDrawable(group);
                 int indexAnswer = Integer.parseInt(myQuestion.getAnswer()) - 1;
                 for (int i = 0; i < possibleAnswers.length; i++) {
                     //if the button at position i was pressed
                     if (checkedId == possibleAnswers[i].getId()) {
                         //if its the correct answer
-                        if (i == indexAnswer)
-                            possibleAnswers[i].setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.checkmark, 0);
-                        else
-                            possibleAnswers[i].setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.wrong, 0);
+                        if (i == indexAnswer) {
+                            possibleAnswers[i] = (RadioButton)group.findViewById(checkedId);
+                            possibleAnswers[i].setCompoundDrawablesWithIntrinsicBounds(R.drawable.checkmark, 0, 0, 0);
+                        }
+                        else {
+                            possibleAnswers[i] = (RadioButton)group.findViewById(checkedId);
+                            possibleAnswers[i].setCompoundDrawablesWithIntrinsicBounds(R.drawable.wrong, 0, 0, 0);
+                        }
 
-                    } else {
-                        possibleAnswers[i].setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
                     }
                 }
             }
         });
 
+
+    }
+    /**
+     * Resets the drawable to the left of the button to be nothing (removes the image)
+     * @param group the radio buttons group
+     */
+    private void resetDrawable(RadioGroup group) {
+        for(int i=0;i<possibleAnswers.length;i++){
+            RadioButton radioButton = (RadioButton) group.findViewById(possibleAnswers[i].getId());
+            radioButton.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+        }
     }
 
     /**
      * Sets the text of each radio button as a possible answer
      * @param myQuestion the Question corresponding to the possible answers
      */
-    public void setButtonText(Question myQuestion) {
+    private void setButtonText(Question myQuestion) {
         for (int i = 0; i < possibleAnswers.length; i++) {
             possibleAnswers[i].setText(myQuestion.getPossibleAnswers()[i]);
         }
@@ -204,12 +219,15 @@ public class ExpandableQuestionListAdapter extends BaseExpandableListAdapter {
      * Initializes the RadioButton array of possible answers
      * @param childView the View in which the radio buttons are defined
      */
-    public void initializeButtons(View childView) {
+    private void initializeButtons(View childView) {
         //array of radioButtons, each button will correspond to a possible answer
         possibleAnswers[0] = (RadioButton) childView.findViewById(R.id.answer1);
         possibleAnswers[1] = (RadioButton) childView.findViewById(R.id.answer2);
         possibleAnswers[2] = (RadioButton) childView.findViewById(R.id.answer3);
         possibleAnswers[3] = (RadioButton) childView.findViewById(R.id.answer4);
+
+
+
     }
 }
 

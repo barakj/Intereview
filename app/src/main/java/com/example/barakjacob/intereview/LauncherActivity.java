@@ -41,7 +41,7 @@ public class LauncherActivity extends ActionBarActivity {
     /**
      * Parses/reads the questions from the JSON file and adds them to the manager
      */
-    public void parseQuestionsFromFile() {
+    private void parseQuestionsFromFile() {
         JSONParser parser = new JSONParser();
         String fileName = "questions.json";
         try {
@@ -79,7 +79,7 @@ public class LauncherActivity extends ActionBarActivity {
     /**
      * Parses/reads the topics from the JSON file and adds them to the manager
      */
-    public void parseTopicsFromFile() {
+    private void parseTopicsFromFile() {
         JSONParser parser = new JSONParser();
         String fileName = "topics.json";
         try {
@@ -111,7 +111,7 @@ public class LauncherActivity extends ActionBarActivity {
     /**
      * Reads the events from the internal storage of the device and adds them to the manager
      */
-    public void readFromInternalStorage() {
+    private void readFromInternalStorage() {
         List<UpcomingEvent> toReturn = null;
         FileInputStream fis;
         try {
@@ -133,7 +133,7 @@ public class LauncherActivity extends ActionBarActivity {
      * Adds an UpcomingEvent list into the manager
      * @param list the UpcomingEvent list to be added
      */
-    public void addToManager(List<UpcomingEvent> list){
+    private void addToManager(List<UpcomingEvent> list){
         if (list != null) {
             for(int i=0;i<list.size();i++) {
                 myManager.add(list.get(i));
@@ -144,7 +144,7 @@ public class LauncherActivity extends ActionBarActivity {
     /**
      * Picks the next activity the app will show based on the information read from the shared preferences
      */
-    public void pickNextActivity(){
+    private void pickNextActivity(){
         //Use Shared Preferences to get the name and email of user
         //Name will be displayed in profile page, email can be used later to send emails
         SharedPreferences pref = getSharedPreferences("userInfo", Context.MODE_PRIVATE);

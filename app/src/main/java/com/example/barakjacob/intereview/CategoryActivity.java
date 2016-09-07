@@ -36,7 +36,7 @@ public class CategoryActivity extends ActionBarActivity {
      * Will set the adapter to either be the Questions adapter(different layout) or the Topics adapter
      * Will set the text at the top of the page depending on which categories will be shown
      */
-    public void DetermineTopicsToDisplay() {
+    private void DetermineTopicsToDisplay() {
         //get info the was passed with intent
         Bundle categoryData = getIntent().getExtras();
         if(categoryData==null)
@@ -63,6 +63,7 @@ public class CategoryActivity extends ActionBarActivity {
                 endingIndex = ProfileActivity.NUM_TERMS;
                 break;
             case ProfileActivity.QUESTIONS_ID:
+                newCategory = "Sample Questions";
                 isQuestion = true;
         }
         //if category to be presented is the Sample Questions - need to use different layout(different adapter)
@@ -79,7 +80,7 @@ public class CategoryActivity extends ActionBarActivity {
      * Sets the title of the category page with a certain string
      * @param title the top string to be shown as the title
      */
-    public void setPageTitle(String title) {
+    private void setPageTitle(String title) {
         TextView pageTitle = (TextView)findViewById(R.id.categoryTitle);
         pageTitle.setText(title);
     }
@@ -87,7 +88,7 @@ public class CategoryActivity extends ActionBarActivity {
     /**
      * Sets the adapter of the ExpandableListView
      */
-    public void setListAdapter() {
+    private void setListAdapter() {
         ExpandableListView list = (ExpandableListView)findViewById(R.id.topicsList);
         list.setAdapter(myAdapter);
     }
@@ -95,7 +96,7 @@ public class CategoryActivity extends ActionBarActivity {
     /**
      * Puts an image instead of text for the action bar
      */
-    public void putImageForActionBar() {
+    private void putImageForActionBar() {
         final ActionBar actionBar = getSupportActionBar();
         //remove all text titles
         actionBar.setDisplayShowHomeEnabled(false);

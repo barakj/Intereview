@@ -55,7 +55,7 @@ public class RegisterActivity extends ActionBarActivity {
      * @param email the email to validate/save
      * @param editor the Shared Preference editor that will write the information into the file
      */
-    public void validateFields(String fullName, String email, SharedPreferences.Editor editor){
+    private void validateFields(String fullName, String email, SharedPreferences.Editor editor){
         //if name is not valid
         if(!isValidName(fullName)) {
             fullNameInput.requestFocus();
@@ -84,7 +84,7 @@ public class RegisterActivity extends ActionBarActivity {
      * @param target the email to validate
      * @returns true if email is valid, false if not
      */
-    public boolean isValidEmail(String target) {
+    private boolean isValidEmail(String target) {
         if (target == null)
             return false;
         //use a built in email pattern
@@ -97,7 +97,7 @@ public class RegisterActivity extends ActionBarActivity {
      * @param target the name to validate
      * @returns true if name is valid, false if not
      */
-    public boolean isValidName(String target){
+    private boolean isValidName(String target){
         //regular expression was found using online sources, takes care of every name other than 1 letter first/last names
         String regex = "^\\p{L}+[\\p{L}\\p{Z}\\p{P}]{0,}";
         Pattern pattern = Pattern.compile(regex,Pattern.CASE_INSENSITIVE);

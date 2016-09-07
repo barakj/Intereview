@@ -296,7 +296,7 @@ public class ProfileActivity extends ActionBarActivity implements ActionBar.TabL
     /**
      * Puts an image instead of text for the action bar
      */
-    public void putImageForActionBar() {
+    private void putImageForActionBar() {
         final ActionBar actionBar = getSupportActionBar();
         //remove all text titles
         actionBar.setDisplayShowHomeEnabled(false);
